@@ -1,31 +1,18 @@
 package com.example.lemonade2
 
-import android.content.Context
 import android.os.Bundle
-import android.service.autofill.OnClickAction
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.Space
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
-import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Outline
-import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.SemanticsActions.OnClick
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -112,7 +99,6 @@ fun LemonadeImgText(
     drawableR: Int,
     contentDesc: Int,
     onImageClick: () -> Unit,
-    modifier: Modifier = Modifier
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -123,7 +109,7 @@ fun LemonadeImgText(
         Spacer(modifier = Modifier.height(16.dp))
 
         Image(
-            painter = painterResource(drawableR),
+            painter= painterResource(drawableR),
             contentDescription = stringResource(contentDesc),
             modifier = Modifier
                 .wrapContentSize()
